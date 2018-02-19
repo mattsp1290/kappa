@@ -1,0 +1,19 @@
+version: "3.4"
+
+# Compose File meant for local testing
+
+services:
+  twitch:
+    image: mattsp1290/kappa-twitch
+    environment:
+      KAFKA: "kafka:9092"
+      KAFKA_TOPIC: "chat_message"
+      TWITCH_USERNAME: $TWITCH_USERNAME
+      TWITCH_PASSWORD: $TWITCH_PASSWORD
+      TWITCH_CHANNEL: "shannanina"
+    networks:
+      - kappa
+    
+networks:
+  kappa:
+    external: true

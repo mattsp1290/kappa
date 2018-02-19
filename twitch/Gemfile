@@ -1,0 +1,5 @@
+source 'https://rubygems.org'
+
+gem 'isaac'
+gem 'ruby-kafka'
+gem 'twitch'

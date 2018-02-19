@@ -13,6 +13,11 @@ services:
       TWITCH_CHANNEL: "shannanina"
     networks:
       - kappa
+
+  messages:
+    image: mattsp1290/kappa-messages:latest
+    networks:
+      - kappa
     
 networks:
   kappa:

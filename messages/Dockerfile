@@ -1,0 +1,14 @@
+FROM mattsp1290/rails:latest
+
+MAINTAINER Matt Spurlin <mattsp1290@gmail.com>
+
+RUN apk --update --upgrade add --no-cache postgresql-dev
+RUN mkdir /app
+WORKDIR /app
+COPY Gemfile /app
+COPY Gemfile.lock /app
+RUN bundle install
+COPY ./ /app/
+COPY run.sh /run.sh
+
+ENTRYPOINT [ "/run.sh" ]

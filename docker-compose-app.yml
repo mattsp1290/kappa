@@ -10,7 +10,7 @@ services:
       KAFKA_TOPIC: "chat_message"
       TWITCH_USERNAME: $TWITCH_USERNAME
       TWITCH_PASSWORD: $TWITCH_PASSWORD
-      TWITCH_CHANNEL: "dexbonus"
+      TWITCH_CHANNEL: "anniefuchsia"
     networks:
       - kappa
 

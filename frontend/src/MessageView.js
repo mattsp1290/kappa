@@ -4,7 +4,8 @@ import gql from 'graphql-tag';
 
 function MessageView({ data: { messages, refetch } }) {
   return (
-    <div>
+    <div className="message-view">
+      <br />
       <button onClick={() => refetch()}>Refresh</button>
       {messages && messages.map(message => <p key={message.id}>{message.nick}: {message.message}</p>)}
     </div>

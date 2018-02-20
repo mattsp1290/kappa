@@ -19,6 +19,13 @@ services:
     networks:
       - kappa
 
+  frontend:
+    image: mattsp1290/kappa-frontend:latest
+    ports:
+      - 8000:3000
+    networks:
+      - kappa
+
   rails:
     image: mattsp1290/kappa-messages-rails:latest
     ports:

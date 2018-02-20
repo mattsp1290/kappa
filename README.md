@@ -4,6 +4,16 @@ A mono repo for presentation on Kappa Architecture
 Slides: https://docs.google.com/presentation/d/1WNmq6_YUYxX2EMjR8Mf65uACocyqeyVoi1nKOzXT6nc/edit?usp=sharing
 
 ## Setup
+Add the following entries or their equivalents to your /etc/hosts file
+
+`127.0.0.1	kafka`
+
+`127.0.0.1	postgresql`
+
+`127.0.0.1	rails`
+
+Then run the following
+
 `docker swarm init`
 
 `docker network create kappa -d overlay --attachable --scope swarm`

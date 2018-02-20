@@ -9,6 +9,6 @@ COPY Gemfile /app
 COPY Gemfile.lock /app
 RUN bundle install
 COPY ./ /app/
-COPY run.sh /run.sh
+COPY kafka-run.sh /run.sh
 
 ENTRYPOINT [ "/run.sh" ]

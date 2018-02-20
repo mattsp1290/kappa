@@ -18,6 +18,13 @@ services:
     image: mattsp1290/kappa-messages:latest
     networks:
       - kappa
+
+  rails:
+    image: mattsp1290/kappa-messages-rails:latest
+    ports:
+      - 3000:3000
+    networks:
+      - kappa
     
 networks:
   kappa:
